@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS long_id_model;
 DROP TABLE IF EXISTS string_id_model;
 DROP TABLE IF EXISTS auto_id_model;
 DROP TABLE IF EXISTS test_user;
+DROP TABLE IF EXISTS test_user_ext;
 DROP TABLE IF EXISTS test_user_account;
 DROP TABLE IF EXISTS twods_model;
 
@@ -45,6 +46,13 @@ CREATE TABLE test_user
     name VARCHAR(50) COMMENT '姓名',
     PRIMARY KEY (`id`)
 );
+
+CREATE TABLE test_user_ext
+(
+    user_id VARCHAR(50) NOT NULL COMMENT '用户id',
+    ext     VARCHAR(200) COMMENT '拓展信息'
+);
+
 CREATE TABLE test_user_account
 (
     id               VARCHAR(50) NOT NULL,
