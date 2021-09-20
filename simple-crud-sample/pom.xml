@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.loyayz.sample</groupId>
+        <groupId>io.simpleframework.sample</groupId>
         <artifactId>simple-sample</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -14,19 +14,19 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>simple-crud-with-jpa</module>
-        <module>simple-crud-without-jpa</module>
-        <module>simple-crud-with-pagehelper</module>
+        <module>simple-crud-basic</module>
+        <module>simple-crud-mybatis-spring</module>
+        <module>simple-crud-mybatis-spring-jpa</module>
+        <module>simple-crud-mybatis-spring-mybatisplus</module>
+        <module>simple-crud-mybatis-spring-pagehelper</module>
+        <module>simple-crud-mybatis-spring-multidatasource</module>
+        <module>simple-crud-mybatis-dynamic-model</module>
+        <module>simple-crud-mybatis-without-spring</module>
     </modules>
-
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.loyayz</groupId>
+            <groupId>io.simpleframework</groupId>
             <artifactId>simple-crud</artifactId>
         </dependency>
 
@@ -34,14 +34,10 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
         </dependency>
     </dependencies>
 
